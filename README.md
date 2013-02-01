@@ -29,6 +29,6 @@ Use this inside head element:
 
 Add onload event handler to the body element:
 
-<code>
+``` html
     onload="javascript:backward5();"
-</code>
+```
