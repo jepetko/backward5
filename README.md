@@ -10,7 +10,7 @@ E.g.
 <code>
     &lt;head&gt;
         &lt;title&gt;Backward5&lt;/title&gt;
-        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html&#59; charset=utf-8"/&gt;
 
         &lt;!-- include jQuery UI --&gt;
         &lt;link href="jquery-ui/css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet"&gt;
