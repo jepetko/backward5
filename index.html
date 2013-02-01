@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Backward5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
         <!-- include jQuery UI -->
         <link href="jquery-ui/css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
@@ -23,66 +24,59 @@
         <section>
             <form>
                 <fieldset>
-                    <legend>Add new goal</legend>
+                    <legend>Evaluate HTML5 compatibility</legend>
                     <p>
-                        Description:
-                        <div id="desc" contenteditable>
-                            Insert your description here...
-                        </div>
+                        range:
+                        <input id="range" type="range" data-mytype="range" min="1" max="10"/>
                     </p>
                     <p>
-                        Priority:
-                        <input id="priority" type="range" data-mytype="range" min="1" max="10"/>
+                        date:
+                        <input id="date" type="date" data-mytype="date"/>
                     </p>
                     <p>
-                        Dead line:
-                        <input id="deadline" type="date" data-mytype="date"/>
-                    </p>
-                    <p>
-                        Color:
+                        color:
                         <input id="color" type="color" data-mytype="color"/>
                     </p>
                     <p>
-                        Email:
+                        email:
                         <input id="email" type="email" data-mytype="email"/>
                     </p>
                     <p>
-                        Month:
+                        month:
                         <input id="month" type="month" data-mytype="month"/>
                     </p>
                     <p>
-                        Age:
-                        <input id="age" type="number" data-mytype="number"/>
+                        age:
+                        <input id="number" type="number" data-mytype="number"/>
                     </p>
                     <p>
-                        Search Keywords:
-                        <input id="searchkeywords" type="search" data-mytype="search"/>
+                        search:
+                        <input id="search" type="search" data-mytype="search"/>
                     </p>
                     <p>
-                        Phone number:
-                        <input id="phone" type="tel" data-mytype="tel"/>
+                        tel:
+                        <input id="tel" type="tel" data-mytype="tel"/>
                     </p>
                     <p>
-                        Time when you wake up:
+                        time:
                         <input id="time" type="time" data-mytype="time"/>
                     </p>
                     <p>
-                        URL:
+                        url:
                         <input id="url" type="url" data-mytype="url"/>
                     </p>
                     <p>
-                        Week:
+                        week:
                         <input id="week" type="week" data-mytype="week"/>
                     </p>
                     <p>
-                        Datetime:
+                        datetime:
                         <input id="datetime" type="datetime" data-mytype="datetime"/>
                     </p>
                     <p>
-                        Datetime-local:
+                        datetime-local:
                         <input id="datetime-local" type="datetime-local" data-mytype="datetime-local"/>
                     </p>
-                    <input type="button" value="Add"/>
                 </fieldset>
             </form>
         </section>
