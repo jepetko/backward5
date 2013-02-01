@@ -1,0 +1,42 @@
+body {
+    font-family: "Lucida Console";
+}
+
+menu ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+article {
+    margin-top: 100px;
+}
+
+article header {
+    font-weight: bolder;
+}
+
+article aside {
+    width: 20%;
+    float: right;
+    border: 1px solid #ffe4c4;
+}
+
+article p {
+    width: 79%;
+    float: left;
+}
+
+article footer {
+    width: 100%;
+    clear: both;
+    text-align: center;
+    border: 1px solid #deb887;
+}
+
+fieldset p {
+    padding: 10px;
+}
+
+fieldset > p > input {
+    float: right;
+}
