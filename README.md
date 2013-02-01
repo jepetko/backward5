@@ -8,7 +8,7 @@ You'll need to include jQuery UI and some jQuery plugins (e.g. colorpicker) bund
 
 Use this inside head element:
 
-<pre>
+``` html
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
         <!-- include jQuery UI -->
@@ -25,7 +25,7 @@ Use this inside head element:
 
         <!-- include your stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</pre>
+```
 
 Add onload event handler to the body element:
 
