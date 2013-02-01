@@ -8,20 +8,20 @@ You'll need to include jQuery UI and some jQuery plugins (e.g. colorpicker) bund
 
 Use this inside head element:
 <code>
-        <!-- include jQuery UI -->
-        <link href="jquery-ui/css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet"/>
-        <script src="jquery-ui/js/jquery-1.9.0.js" type="text/javascript"></script>
-        <script src="jquery-ui/js/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+        &lt;!-- include jQuery UI --&gt;
+        &lt;link href=&quot;jquery-ui/css/smoothness/jquery-ui-1.10.0.custom.css&quot; rel=&quot;stylesheet&quot;/&gt;
+        &lt;script src=&quot;jquery-ui/js/jquery-1.9.0.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;jquery-ui/js/jquery-ui-1.10.0.custom.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 
-        <!-- additional jQuery plugins - not bundled with jQuery UI -->
-        <link href="jquery-colorpicker/colorPicker.css" rel="stylesheet" type="text/css"/>
-        <script src="jquery-colorpicker/jquery.colorPicker.js" type="text/javascript"></script>
+        &lt;!-- additional jQuery plugins - not bundled with jQuery UI --&gt;
+        &lt;link href=&quot;jquery-colorpicker/colorPicker.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+        &lt;script src=&quot;jquery-colorpicker/jquery.colorPicker.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 
-        <!-- include backward5 compatibility utility -->
-        <script src="backward5.js" type="text/javascript"></script>
+        &lt;!-- include backward5 compatibility utility --&gt;
+        &lt;script src=&quot;backward5.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 
-        <!-- include your stylesheet -->
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        &lt;!-- include your stylesheet --&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style.css&quot;/&gt;
 </code>
 
 Add onload event handler to the body element:
