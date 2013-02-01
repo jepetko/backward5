@@ -8,9 +8,6 @@ You'll need to include jQuery UI and some jQuery plugins (e.g. colorpicker) bund
 
 Use this inside head element:
 <code>
-        <!-- title and meta tags here -->
-
-
         <!-- include jQuery UI -->
         <link href="jquery-ui/css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet"/>
         <script src="jquery-ui/js/jquery-1.9.0.js" type="text/javascript"></script>
