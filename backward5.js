@@ -12,7 +12,9 @@
                 $( this ).datepicker();
             },
             color : function() {
-                $( this ).colorPicker();
+                var el = $( this );
+                if( typeof el.colorPicker == 'method')
+                    el.colorPicker();
             },
             email : function() {
                 //support this

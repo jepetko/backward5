@@ -27,8 +27,8 @@ Use this inside head element:
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 ```
 
-Add onload event handler to the body element:
+Add onload event handler to the body element to provide fallback for all input elements
 
 ``` html
-    onload="javascript:backward5();"
+onload="javascript:$('input').backward5();"
 ```
