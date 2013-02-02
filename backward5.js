@@ -1,65 +1,52 @@
 (function($) {
     $.fn.backward5 = function() {
-        //provide alternative support for following input types:
-        //range, date, color, email, month, number, search, tel, time, url, week, datetime, datetime-local
-        var workarounds = {
+        //provide alternative rendering support for following input types:
+        //range, date, color, number
+        var renderStrategies = {
             range : function() {
                 var _id = "div_" + this.id;
-                $( this ).replaceWith('<div id="' + _id + '"/>');
-                $( this ).slider( {max:parseInt(this.max), min:parseInt(this.min)} );
+                $( this ).replaceWith('<div id="' + _id + '/>')
+                return $( "#" + _id ).slider( {max:parseInt(this.max), min:parseInt(this.min)} );
             },
             date : function() {
-                $( this ).datepicker();
+                return $( this ).datepicker();
             },
             color : function() {
                 var el = $( this );
-                if( typeof el.colorPicker == 'method')
-                    el.colorPicker();
-            },
-            email : function() {
-                //support this
-            },
-            month : function() {
-                //support this
+                if( typeof el.colorPicker == 'function') {
+                    return el.colorPicker();
+                }
+                return null;
             },
             number : function() {
-                $( this ).spinner();
-            },
-            search : function() {
-                //support this
-            },
-            tel : function() {
-                //support this
-            },
-            time : function() {
-                //support this
-            },
-            url : function() {
-                //support this
-            },
-            week : function() {
-                //support this
-            },
-            datetime : function() {
-                //support this
+                return $( this ).spinner();
             }
         };
+        //provide alternative validating support for following input types:
+        //range, date, color, email, month, number, search, tel, time, url, week, datetime, datetime-local
 
+        //do the work:
         var debug = arguments[0] || false;
+        var debugStyles = [ { 'background-color' : '#90ee90', 'border' : '1px solid #00ff00' },
+                            { 'background-color' : '#ffffe0', 'border' : '1px solid #ffff00' } ];
         var i=0;
         while( i<this.length ) {
             var input = this[i];
             if( input.type && input.type == "text") {
-                var attr = input.getAttribute("data-mytype");
-                if( attr && attr != "text" && workarounds[attr]) {
+                var attr = input.getAttribute("data-bw-type");
+                if( attr && attr != "text" && renderStrategies[attr]) {
+                    var ret = renderStrategies[attr].apply(input,[]);
                     if( debug ) {
-                        var p = $( input ).parent();
-                        if(p) {
-                            p.css("background-color","#90ee90");
-                            p.css("border","1px solid #00ff00");
+                        var p = $(input).parent();
+                        var s = debugStyles[1];
+                        if( ret ) {
+                            p = ret.parent();
+                            s = debugStyles[0];
+                        }
+                        for( var styleProp in s ) {
+                            p.css(styleProp, s[styleProp]);
                         }
                     }
-                    workarounds[attr].apply(input,[]);
                 }
             }
             i++;

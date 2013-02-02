@@ -27,8 +27,15 @@ Use this inside head element:
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 ```
 
+Add "data-bw-type" attribute to each input element which has the same value as type attribute. Example:
+
+``` html
+<input id="number" type="number" data-bw-type="number" required="true"/>
+```
+
 Add onload event handler to the body element to provide fallback for all input elements
 
 ``` html
 onload="javascript:$('input').backward5();"
 ```
+
